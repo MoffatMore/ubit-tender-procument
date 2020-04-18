@@ -16,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/login', 301);
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('tender', 'TenderController');
+
+Route::group(['prefix' => 'procument/tenders', 'namespace' => 'Procument', 'as' => 'procument.',], function () {
+    Route::get('bidders', 'HomeController@tenders')->name('tender-bidders');
+    Route::get('create', 'HomeController@createTenders')->name('create-tenders');
+    Route::get('evaluation', 'HomeController@tenderEvaluation')->name('tender-evaluation');
+    Route::get('rejection', 'HomeController@rejectedTenders')->name('rejected-tenders');
+});
