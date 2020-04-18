@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
@@ -21,7 +22,9 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME          = '/home';
+    public const PROCUREMENT   = 'procument.dashboard';
+    public const BIDDERS       = 'bidders.dashboard';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -76,5 +79,18 @@ class RouteServiceProvider extends ServiceProvider
             ->middleware('api')
             ->namespace($this->namespace)
             ->group(base_path('routes/api.php'));
+    }
+
+    public static function redirectTo()
+    {
+        $user = Auth::user();
+
+        if ($user->hasRole('Procurement')) {
+            return route(self::PROCUREMENT);
+        } elseif ($user->hasRole('Bidder')) {
+            return route(self::BIDDERS);
+        } else {
+            abort(401);
+        }
     }
 }
