@@ -13,4 +13,17 @@ class Organisation extends Model
         'email',
         'location'
     ];
+
+    public function tenders()
+    {
+        return $this->hasManyThrough(
+            Tender::class,
+            User::class,
+        );
+    }
+
+    public function users()
+    {
+        return $this->hasMany(User::class);
+    }
 }

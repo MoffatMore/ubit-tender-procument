@@ -17,7 +17,7 @@ class CreateTendersTable extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->string("name");
-            $table->string("reference_no");
+            $table->string("reference_no")->unique();
             $table->string("requirements");
             $table->datetime('start_time');
             $table->datetime('end_time');

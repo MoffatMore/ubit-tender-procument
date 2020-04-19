@@ -18,17 +18,15 @@
 
             <div class="card-body">
 
-                <form action="" method="POST" enctype="multipart/form-data" id="form">
+                <form action="{{ route('procument.tender.store') }}" method="POST" enctype="multipart/form-data"
+                    id="form">
                     @csrf
                     <div class="form-group {{ $errors->has('org_name') ? 'has-error' : '' }}">
                         <label for="venue">Organisation Name</label>
                         <input type="text" id="org_name" name="org_name" class="form-control"
-                            value="{{ old('org_name') }}" required>
-                        @if($errors->has('org_name'))
-                        <em class="invalid-feedback">
-                            {{ $errors->first('org_name') }}
-                        </em>
-                        @endif
+                            value="{{ Auth::user()->organisation->name }}" required readonly>
+                            <input type="hidden" id="org_name" name="org_id" class="form-control"
+                            value="{{ Auth::user()->organisation->id }}" required>
                     </div>
                     <div class="form-group {{ $errors->has('tender_name') ? 'has-error' : '' }}">
                         <label for="venue">Tender Name</label>
@@ -43,7 +41,7 @@
                     <div class="form-group {{ $errors->has('reference_no') ? 'has-error' : '' }}">
                         <label for="venue">Tender Reference Number</label>
                         <input type="text" id="reference_no" name="reference_no" class="form-control"
-                            value="{{ old('reference_no') }}" required>
+                            value="{{ Str::referenceNumber() }}" required>
                         @if($errors->has('reference_no'))
                         <em class="invalid-feedback">
                             {{ $errors->first('reference_no') }}

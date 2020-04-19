@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Mixins\StrMixins;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,5 +26,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        //custom string mixins
+        Str::mixin(new StrMixins());
     }
 }

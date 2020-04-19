@@ -24,10 +24,7 @@ class StoreTenderRequest extends FormRequest
     public function rules()
     {
         return [
-            'user_id' => [
-                'required',
-            ],
-            'name' => [
+            'tender_name' => [
                 'required',
             ],
             'reference_no'   => [

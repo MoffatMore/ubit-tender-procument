@@ -4,24 +4,38 @@ namespace App\Repository\Eloquent;
 
 use App\Repository\TenderRepositoryInterface;
 use App\Tender;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Auth;
 
 class TenderRepository extends AbstractBaseRepository implements TenderRepositoryInterface
 {
-    public function __construct(Tender $tender)
+    public function __construct(Tender $model)
     {
-        parent::__construct($tender);
+        parent::__construct($model);
     }
 
-    public function update(int $id, array $attributes)
+    public function update($id, array $attributes): Model
     {
-        # code...
+        return $this->model;
     }
     public function publishTender($args)
     {
-        return $this->create($args);
+        return $this->create(
+            [
+                'name'         => $args->tender_name,
+                'user_id'      => Auth::user()->id,
+                'reference_no' => $args->reference_no,
+                'requirements' => $args->requirements,
+                'proc_dept'    => $args->proc_dept,
+                'start_time'   => $args->start_time,
+                'end_time'     => $args->end_time,
+            ]
+        );
     }
 
-    public function getTenders($id)
+    public function getTenders($id): Collection
     {
+        return null;
     }
 }
