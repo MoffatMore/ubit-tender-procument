@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
@@ -38,8 +40,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function organisation()
+    public function organisation(): BelongsTo
     {
         return $this->belongsTo(Organisation::class);
+    }
+    public function tenders(): HasMany
+    {
+        return $this->hasMany(Tender::class);
     }
 }

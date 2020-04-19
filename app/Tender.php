@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Tender extends Model
 {
@@ -24,4 +26,14 @@ class Tender extends Model
         'start_time',
         'end_time',
     ];
+
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function bidding(): HasMany
+    {
+        return $this->hasMany(Bidding::class,'tender_id','id');
+    }
 }

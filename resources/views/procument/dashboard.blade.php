@@ -8,7 +8,7 @@
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                             <a href="{{ route('procument.tender-bidders') }}">Tender Bidders</a>
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-user-alt fa-2x text-gray-300"></i>

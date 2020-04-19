@@ -34,13 +34,16 @@
                         </thead>
 
                         <tbody>
+                            @foreach ($tenders as $tender)
                             <tr>
-                                <td>x</td>
-                                <td>x</td>
-                                <td>x</td>
-                                <td>x</td>
-                                <td>x</td>
-                                <td>x</td>
+                                <td>{{ $tender->id }}</td>
+                                <td>{{ $tender->name }}</td>
+                                <td>{{ $tender->reference_no }}</td>
+                                <td>{{ $tender->start_time }}</td>
+                                <td>{{ $tender->end_time }}</td>
+                                <td>
+                                    {{ $tender->biddings !== null ? 0 : $tender->biddings->count() }}
+                                </td>
                                 <td>
                                     <a class="btn btn-info btn-sm  text-center text-white" href=""><i
                                             class="fa fa-award"></i> Evauate</a>
@@ -52,6 +55,7 @@
                                         <i class="fa fa-trash"></i>Delete</button>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

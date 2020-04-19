@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Http\View\TenderComposer;
 use App\Mixins\StrMixins;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 
@@ -28,5 +30,6 @@ class AppServiceProvider extends ServiceProvider
         //
         //custom string mixins
         Str::mixin(new StrMixins());
+        View::composer(['procument.*', '*'], TenderComposer::class);
     }
 }
