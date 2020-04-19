@@ -24,31 +24,27 @@ class StoreTenderRequest extends FormRequest
     public function rules()
     {
         return [
+            'user_id' => [
+                'required',
+            ],
             'name' => [
                 'required',
             ],
-            'dob' => [
-                'required',
-                // 'date_format:' . config('panel.date_format'),
-            ],
-            'surname'   => [
+            'reference_no'   => [
                 'required',
             ],
-            'email' => [
+            'requirements' => [
                 'required',
             ],
-            'gender' => [
+            'proc_dept' => [
                 'required',
             ],
-            'postal_address' => [
+            'start_time' => [
                 'required',
             ],
-            'physical_address' => [
+            'end_time' => [
                 'required',
             ],
-            'contact' => [
-                'required',
-            ]
         ];
     }
 }

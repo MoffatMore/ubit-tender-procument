@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Facade\TenderRepository;
+use App\Http\Requests\StoreTenderRequest;
 use Illuminate\Http\Request;
 
 class TenderController extends Controller
@@ -32,9 +34,13 @@ class TenderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTenderRequest $request)
     {
-        //
+        $results = TenderRepository::pushTender($request);
+        if ($results) {
+            $request->session()->flash('status', 'Successfully published a tender');
+        }
+        return redirect()->route('home');
     }
 
     /**

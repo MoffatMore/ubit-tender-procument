@@ -85,6 +85,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         $user = Auth::user();
 
+        // \dd($user->roles);
         if ($user->hasRole('Procurement')) {
             return route(self::PROCUREMENT);
         } elseif ($user->hasRole('Bidder')) {

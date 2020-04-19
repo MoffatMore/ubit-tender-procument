@@ -40,7 +40,7 @@
                         </em>
                         @endif
                     </div>
-                    <div class="form-group {{ $errors->has('org_name') ? 'has-error' : '' }}">
+                    <div class="form-group {{ $errors->has('reference_no') ? 'has-error' : '' }}">
                         <label for="venue">Tender Reference Number</label>
                         <input type="text" id="reference_no" name="reference_no" class="form-control"
                             value="{{ old('reference_no') }}" required>
@@ -61,7 +61,7 @@
                         </em>
                         @endif
                     </div>
-                    <div class="form-group {{ $errors->has('org_name') ? 'has-error' : '' }}">
+                    <div class="form-group {{ $errors->has('proc_dept') ? 'has-error' : '' }}">
                         <label for="venue">Procuring Department</label>
                         <input type="text" id="proc_dept" name="proc_dept" class="form-control"
                             value="{{ old('proc_dept') }}" required>
