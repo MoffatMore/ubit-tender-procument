@@ -54,7 +54,7 @@
                                     fa-pencil-alt"></i> Edit</a>
                                         <button class="delete btn btn-danger btn-sm text-center text-white" id=""
                                                 data-id=''>
-                                            <i class="fa fa-trash"></i>Delete</button>
+                                            <i class="fa fa-trash"></i> Delete</button>
                                     @endif
                                 </td>
                             </tr>

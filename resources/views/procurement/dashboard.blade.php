@@ -74,10 +74,11 @@
                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                             <a href="{{ route('procurement.rejected-tenders') }}">Rejected Bidders</a>
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">
+                        </div>
                     </div>
                     <div class="col-auto">
-                        <i class="fas fa-comments fa-2x text-gray-300"></i>
+                        <i class="fas fa-user-times fa-2x text-gray-300"></i>
                     </div>
                 </div>
             </div>

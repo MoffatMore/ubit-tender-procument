@@ -429,6 +429,64 @@
         });
 
     </script>
+    <script type="application/javascript">
+        $(document).ready(function() {
+            var groupColumn = 1;
+            var table = $('#example2').DataTable({
+                responsive: {
+                    details: {
+                        display: $.fn.dataTable.Responsive.display.modal({
+                            header: function(row) {
+                                var data = row.data();
+                                return 'Tender Details for ' + data[1];
+                            }
+                        })
+                        , renderer: $.fn.dataTable.Responsive.renderer.tableAll({
+                            tableClass: 'table'
+                        })
+                    }
+                },
+                "columnDefs": [{
+                    "visible": false
+                    , "targets": groupColumn
+                }]
+                , "order": [
+                    [groupColumn, 'asc']
+                ]
+                , "displayLength": 10
+                , "drawCallback": function(settings) {
+                    var api = this.api();
+                    var rows = api.rows({
+                        page: 'current'
+                    }).nodes();
+                    var last = null;
+
+                    api.column(groupColumn, {
+                        page: 'current'
+                    }).data().each(function(group, i) {
+                        if (last !== group) {
+                            $(rows).eq(i).before(
+                                '<tr class="group alert-primary"><td colspan="8">' + group + '</td></tr>'
+                            );
+
+                            last = group;
+                        }
+                    });
+                }
+            });
+
+            // Order by the grouping
+            $('#example2 tbody').on('click', 'tr.group', function() {
+                let currentOrder = table.order()[0];
+                if (currentOrder[0] === groupColumn && currentOrder[1] === 'asc') {
+                    table.order([groupColumn, 'desc']).draw();
+                } else {
+                    table.order([groupColumn, 'asc']).draw();
+                }
+            });
+        });
+
+    </script>
 </body>
 
 </html>

@@ -1,5 +1,14 @@
 @extends('layouts.default')
 
+@section('breadcrumb')
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Evaluate Tenders</li>
+        </ol>
+    </nav>
+@endsection
+
 @section('content')
 <div class="row">
     <!-- Begin Page Content -->
@@ -11,7 +20,7 @@
             <div class="card-body">
                 <input type="hidden" name="_token" value="{{ @csrf_token() }}">
                 <div class="table-responsive">
-                    <table id="example1" class="table table-striped table-borderless nowrap" style="width:100%">
+                    <table id="example2" class="table table-striped table-borderless nowrap" style="width:100%">
                         <thead>
                             <tr>
                                 <th>#</th>
@@ -28,7 +37,7 @@
                         <tbody>
                         @foreach($tenders as $tender)
                             @foreach($tender->bids as $bid)
-                                @if ($bid->status >= 0)
+                                @if ($bid->status === 'approved')
                                     <tr>
                                         <td>{{ $tender->id }}</td>
                                         <td>{{ $tender->name }}</td>
@@ -49,15 +58,11 @@
                                             @endif
                                         </td>
                                         <td>
-                                            @if ($bid->status === 0)
-                                                <i class="fa fa-times fa-2x text-danger"></i>
-                                            @else
-                                                <i class="fa fa-check fa-2x text-success" ></i>
-                                            @endif
+                                            <i class="fa fa-check fa-2x text-success" ></i>
                                         </td>
                                         <td>
                                             <a class="btn btn-info btn-sm  text-center text-white" href="">
-                                                <i class="fa fa-accusoft"></i> Evauate</a>
+                                                <i class="fa fa-award"></i> Evauate</a>
                                         </td>
                                     </tr>
                                 @endif
