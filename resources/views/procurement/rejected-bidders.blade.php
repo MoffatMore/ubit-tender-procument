@@ -32,9 +32,27 @@
                                     <td>{{ $tender->name }}</td>
                                     <td>{{ $tender->reference_no }}</td>
                                     <td>{{ $bid->user->organisation->name }}</td>
-                                    <td>{{ $bid->docs }}</td>
-                                    <td>{{ $bid->qualification }}</td>
-                                    <td>{{ $bid->status }}</td>
+                                    <td>
+                                       @if ($bid->docs === 0)
+                                            <i class="fa fa-times fa-2x text-danger"></i>
+                                       @else
+                                            <i class="fa fa-check fa-2x text-success" ></i>
+                                       @endif
+                                    </td>
+                                    <td>
+                                        @if ($bid->qualification === 0)
+                                            <i class="fa fa-times fa-2x text-danger"></i>
+                                        @else
+                                            <i class="fa fa-check fa-2x text-success" ></i>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if ($bid->status === 0)
+                                            <i class="fa fa-times fa-2x text-danger"></i>
+                                        @else
+                                            <i class="fa fa-check fa-2x text-success" ></i>
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
                         @endforeach
