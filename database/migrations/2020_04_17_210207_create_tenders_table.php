@@ -16,9 +16,10 @@ class CreateTendersTable extends Migration
         Schema::create('tenders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string("name");
-            $table->string("reference_no")->unique();
-            $table->string("requirements");
+            $table->string('name');
+            $table->string('reference_no')->unique();
+            $table->string('requirements');
+            $table->string('proc_dept');
             $table->datetime('start_time');
             $table->datetime('end_time');
             $table->timestamps();

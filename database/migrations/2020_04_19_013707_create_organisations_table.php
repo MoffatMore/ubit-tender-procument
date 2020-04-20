@@ -11,14 +11,14 @@ class CreateOrganisationsTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('organisations', function (Blueprint $table) {
             $table->id();
-            $table->string("name")->unique();
-            $table->string("email")->unique();
-            $table->string("contact");
-            $table->string("location");
+            $table->string('name')->unique();
+            $table->string('email')->unique();
+            $table->string('contact');
+            $table->string('location');
             $table->timestamps();
         });
     }

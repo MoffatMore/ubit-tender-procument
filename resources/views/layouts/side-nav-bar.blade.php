@@ -6,7 +6,7 @@
       <div class="sidebar-brand-icon rotate-n-15">
         <i class="fas fa-laugh-wink"></i>
       </div>
-      {{-- @auth('procument')
+      {{-- @auth('procurement')
       <div class="sidebar-brand-text mx-3"> </div>
       @endauth
       @auth('bidder')

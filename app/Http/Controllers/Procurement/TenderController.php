@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Procument;
+namespace App\Http\Controllers\Procurement;
 
 use App\Facade\TenderRepository;
 use App\Http\Controllers\Controller;

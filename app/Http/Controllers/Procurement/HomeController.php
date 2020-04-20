@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Procument;
+namespace App\Http\Controllers\Procurement;
 
 use App\Http\Controllers\Controller;
 
@@ -12,23 +12,28 @@ class HomeController extends Controller
         $this->middleware(['auth']);
     }
 
+    public function index()
+    {
+        return view('home');
+    }
+
     public function tenders()
     {
-        return view('procument.tender-bidders');
+        return view('procurement.tender-bidders');
     }
 
     public function createTenders()
     {
-        return view('procument.create-tender');
+        return view('procurement.create-tender');
     }
 
     public function rejectedTenders()
     {
-        return view('procument.rejected-bidders');
+        return view('procurement.rejected-bidders');
     }
 
     public function tenderEvaluation()
     {
-        return view('procument.tender-evaluation');
+        return view('procurement.tender-evaluation');
     }
 }

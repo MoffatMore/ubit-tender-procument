@@ -6,7 +6,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            <a href="{{ route('procument.tender-bidders') }}">Tender Bidders</a>
+                            <a href="{{ route('procurement.tender-bidders') }}">Tender Bidders</a>
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800"></div>
                     </div>
@@ -25,7 +25,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                            <a href="{{ route('procument.create-tenders') }}">Create Tender</a>
+                            <a href="{{ route('procurement.create-tenders') }}">Create Tender</a>
                         </div>
                     </div>
                     <div class="col-auto">
@@ -43,7 +43,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                            <a href="{{ route('procument.tender-evaluation') }}">Tender Evaluation</a>
+                            <a href="{{ route('procurement.tender-evaluation') }}">Tender Evaluation</a>
                         </div>
                         <div class="row no-gutters align-items-center">
                             <div class="col-auto">
@@ -72,7 +72,7 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                            <a href="{{ route('procument.rejected-tenders') }}">Rejected Tenders</a>
+                            <a href="{{ route('procurement.rejected-tenders') }}">Rejected Tenders</a>
                         </div>
                         <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
                     </div>

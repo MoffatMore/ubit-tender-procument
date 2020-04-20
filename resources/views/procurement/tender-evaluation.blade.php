@@ -19,7 +19,7 @@
                                 <th>Reference No</th>
                                 <th>Organisation Name</th>
                                 <th>Documents</th>
-                                <th>Quaification</th>
+                                <th>Qualification</th>
                                 <th>Action</th>
                             </tr>
                         </thead>

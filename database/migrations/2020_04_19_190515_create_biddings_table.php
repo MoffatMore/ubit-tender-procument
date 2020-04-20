@@ -11,14 +11,15 @@ class CreateBiddingsTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('biddings', function (Blueprint $table) {
+        Schema::create('bids', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('tender_id');
             $table->string('status');
-            $table->string('qualification');
+            $table->boolean('qualification')->default(false);
+            $table->boolean('docs')->default(false);
             $table->timestamps();
         });
     }

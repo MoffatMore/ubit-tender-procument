@@ -18,7 +18,7 @@
 
             <div class="card-body">
 
-                <form action="{{ route('procument.tender.store') }}" method="POST" enctype="multipart/form-data"
+                <form action="{{ route('procurement.tender.store') }}" method="POST" enctype="multipart/form-data"
                     id="form">
                     @csrf
                     <div class="form-group {{ $errors->has('org_name') ? 'has-error' : '' }}">

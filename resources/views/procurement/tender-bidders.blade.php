@@ -42,7 +42,7 @@
                                 <td>{{ $tender->start_time }}</td>
                                 <td>{{ $tender->end_time }}</td>
                                 <td>
-                                    {{ $tender->biddings !== null ? 0 : $tender->biddings->count() }}
+                                    {{ $tender->bids !== null ? 0 : $tender->biddings->count() }}
                                 </td>
                                 <td>
                                     <a class="btn btn-info btn-sm  text-center text-white" href=""><i

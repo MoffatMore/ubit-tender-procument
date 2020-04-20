@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Bidding extends Model
 {
     //
+    protected $table = 'bids';
+
     protected $fillable = [
         'user_id',
         'tender_id',

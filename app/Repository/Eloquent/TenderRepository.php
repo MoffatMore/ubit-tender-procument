@@ -38,8 +38,9 @@ class TenderRepository extends AbstractBaseRepository implements TenderRepositor
     {
         if (Auth::check()){
             $tenders = $this->model->where('user_id', Auth::user()->id)->get();
-            return $tenders->load('bidding');
+            return $tenders->load('bids');
         }
         return null;
     }
+
 }

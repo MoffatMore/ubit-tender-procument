@@ -30,6 +30,6 @@ class AppServiceProvider extends ServiceProvider
         //
         //custom string mixins
         Str::mixin(new StrMixins());
-        View::composer(['procument.*', '*'], TenderComposer::class);
+        View::composer(['procurement.*', '*'], TenderComposer::class);
     }
 }

@@ -23,7 +23,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     public const HOME          = '/home';
-    public const PROCUREMENT   = 'procument.dashboard';
+    public const PROCUREMENT   = 'procurement.dashboard';
     public const BIDDERS       = 'bidders.dashboard';
 
     /**
@@ -85,11 +85,11 @@ class RouteServiceProvider extends ServiceProvider
     {
         $user = Auth::user();
 
-        // \dd($user->roles);
-        if ($user->hasRole('Procurement')) {
+        if ($user->hasRole('procurer')) {
             return route(self::PROCUREMENT);
-        } elseif ($user->hasRole('Bidder')) {
+        } elseif ($user->hasRole('bidder')) {
             return route(self::BIDDERS);
+
         } else {
             abort(401);
         }
