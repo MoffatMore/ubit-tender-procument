@@ -28,7 +28,7 @@
             <div class="container offset-3">
                 <a class="navbar-brand " href="{{ url('/') }} " style="color: white">
 {{--                    {{ config('app.name', 'Laravel') }}--}}
-                    UB Computer Science Department Procurement System
+                    UB Information Technology Department Procurement System
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -40,13 +40,13 @@
                          <!-- Authentication Links -->
                 @if (Route::has('register') && Route::currentRouteName() !== 'register')
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                        <a class="nav-link" href="{{ route('register') }}" style="color: white;">{{ __('Register') }}</a>
                     </li>
                 @endif
                 @guest
                 @if (Route::has('login') && Route::currentRouteName() !== 'login')
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="nav-link" href="{{ route('login') }}" style="color: white;">{{ __('Login') }}</a>
                 </li>
                 @endif
                 @endguest

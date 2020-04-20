@@ -52,7 +52,7 @@
                                         </div>
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-user btn-block">
-                                        Login
+                                        <i class="fa fa-user-lock"></i> Login
                                     </button>
                                     <hr>
                                 </form>

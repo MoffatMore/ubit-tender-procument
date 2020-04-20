@@ -20,11 +20,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3003a452-1fb3-431d-af22-70322cae2a55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/bashsupport_project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/User.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/law-firm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/law-firm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/vcs.xml" afterDir="false" />
@@ -33,17 +28,10 @@
       <change beforePath="$PROJECT_DIR$/../law-firm/app/Repository/Eloquent/CaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/app/Repository/Eloquent/CaseRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/UserRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/UserRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Tender.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tender.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procurement/rejected-bidders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/rejected-bidders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procurement/tender-bidders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/tender-bidders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +187,7 @@
       <updated>1587333802387</updated>
       <workItem from="1587333804071" duration="385000" />
       <workItem from="1587334224647" duration="9075000" />
-      <workItem from="1587345430753" duration="4941000" />
+      <workItem from="1587345430753" duration="6103000" />
     </task>
     <servers />
   </component>
