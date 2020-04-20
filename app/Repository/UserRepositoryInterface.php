@@ -2,6 +2,6 @@
 
 namespace App\Repository;
 
-class UserRepositoryInterface
+interface UserRepositoryInterface
 {
 }

@@ -13,7 +13,7 @@ use Illuminate\Support\ServiceProvider;
 /**
  * @class RepositoryProvider
  */
-class RepositoryProvider extends ServiceProvider
+class RepositoryServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -25,8 +25,7 @@ class RepositoryProvider extends ServiceProvider
         //
         $this->app->bind(
             EloquentRepositoryInterface::class,
-            AbstractBaseRepository::class
-        );
+            AbstractBaseRepository::class);
         $this->app->bind(TenderRepositoryInterface::class, TenderRepository::class);
         $this->app->bind(UserRepositoryInterface::class, UserRepository::class);
     }

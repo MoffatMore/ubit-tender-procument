@@ -28,7 +28,7 @@
                                 <th>Reference No</th>
                                 <th>Opening Date</th>
                                 <th>Closing Date</th>
-                                <th>Biddings</th>
+                                <th>Bids</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -42,17 +42,20 @@
                                 <td>{{ $tender->start_time }}</td>
                                 <td>{{ $tender->end_time }}</td>
                                 <td>
-                                    {{ $tender->bids !== null ? 0 : $tender->biddings->count() }}
+                                    {{ $tender->bids === null ? 0 : $tender->bids->count() }}
                                 </td>
                                 <td>
-                                    <a class="btn btn-info btn-sm  text-center text-white" href=""><i
-                                            class="fa fa-award"></i> Evauate</a>
-                                    <a class="btn btn-warning btn-sm  text-center text-white" data-toggle="modal"
-                                        data-target="#editClientFileModal"><i class="fa
+                                    @if ($tender->end_time < now())
+                                        <a class="btn btn-info btn-sm  text-center text-white" href=""><i
+                                                    class="fa fa-award"></i> Evauate</a>
+                                    @else
+                                        <a class="btn btn-warning btn-sm  text-center text-white" data-toggle="modal"
+                                           data-target="#editClientFileModal"><i class="fa
                                     fa-pencil-alt"></i> Edit</a>
-                                    <button class="delete btn btn-danger btn-sm text-center text-white" id=""
-                                        data-id=''>
-                                        <i class="fa fa-trash"></i>Delete</button>
+                                        <button class="delete btn btn-danger btn-sm text-center text-white" id=""
+                                                data-id=''>
+                                            <i class="fa fa-trash"></i>Delete</button>
+                                    @endif
                                 </td>
                             </tr>
                             @endforeach

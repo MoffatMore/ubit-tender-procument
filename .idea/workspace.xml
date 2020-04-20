@@ -20,10 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3003a452-1fb3-431d-af22-70322cae2a55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/RoleUserSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/RolesAndPermissionsSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/procurement/rejected-bidders.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/bashsupport_project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/User.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/law-firm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/law-firm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/vcs.xml" afterDir="false" />
@@ -32,35 +33,16 @@
       <change beforePath="$PROJECT_DIR$/../law-firm/app/Repository/Eloquent/CaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/app/Repository/Eloquent/CaseRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ubcs-tender-procument.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ubcs-tender-procument.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Bidding.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bidding.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Procument/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Procurement/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Procument/TenderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Procurement/TenderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/TenderRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/TenderRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RepositoryServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/UserRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/UserRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Tender.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tender.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_17_210207_create_tenders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_17_210207_create_tenders_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_17_225726_create_permission_tables.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_17_225726_create_permission_tables.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_19_013707_create_organisations_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_19_013707_create_organisations_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_19_190515_create_biddings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_19_190515_create_biddings_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/side-nav-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/side-nav-bar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procument/create-tender.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/create-tender.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procument/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procument/rejected-bidders.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procument/tender-bidders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/tender-bidders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procument/tender-evaluation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/tender-evaluation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/procurement/rejected-bidders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/rejected-bidders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/procurement/tender-bidders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/tender-bidders.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,8 +54,12 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="EditorConfigPreviewManager">
+    <editorConfig file="$PROJECT_DIR$/.editorconfig" previewFile="$PROJECT_DIR$/resources/views/procurement/tender-evaluation.blade.php" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -189,7 +175,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="eu.ydp.idea.ts.spec.generator.settings.spec.template" value="import {$ClassName$} from '$TestsRelativePath$../src/$classRelativePath$/$ClassName$';&#10;&#10;describe('$ClassName$', () =&gt; {&#10;  let $ObjName$:$ClassName$;&#10;&#10;  beforeEach(() =&gt; {&#10;    $ObjName$ = new $ClassName$();&#10;  });&#10;&#10;  describe('', () =&gt; {&#10;    it('', () =&gt; {&#10;      // given&#10;&#10;      // when&#10;&#10;      // then&#10;    });&#10;  });&#10;});&#10;" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.EditorConfig" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -208,7 +198,8 @@
       <option name="presentableId" value="Default" />
       <updated>1587333802387</updated>
       <workItem from="1587333804071" duration="385000" />
-      <workItem from="1587334224647" duration="7132000" />
+      <workItem from="1587334224647" duration="9075000" />
+      <workItem from="1587345430753" duration="4941000" />
     </task>
     <servers />
   </component>
@@ -232,17 +223,37 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="610" y="342" key="#Composer/0.0.1600.900@0.0.1600.900" timestamp="1587333828183" />
+    <state x="393" y="91" key="#Plugins" timestamp="1587345573519">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="393" y="91" key="#Plugins/0.0.1600.900@0.0.1600.900" timestamp="1587345573519" />
     <state x="604" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1587342065181">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="604" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900@0.0.1600.900" timestamp="1587342065181" />
-    <state x="381" y="193" key="IDE.errors.dialog" timestamp="1587333850225">
+    <state x="652" y="330" key="DBNavigator.ConnectionAuthenticationDialog" timestamp="1587344889538">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="381" y="193" key="IDE.errors.dialog/0.0.1600.900@0.0.1600.900" timestamp="1587333850225" />
-    <state x="310" y="95" key="SettingsEditor" timestamp="1587342014966">
+    <state x="652" y="330" key="DBNavigator.ConnectionAuthenticationDialog/0.0.1600.900@0.0.1600.900" timestamp="1587344889538" />
+    <state x="332" y="105" key="DBNavigator.ProjectSettingsDialog" timestamp="1587345828028">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="310" y="95" key="SettingsEditor/0.0.1600.900@0.0.1600.900" timestamp="1587342014966" />
+    <state x="332" y="105" key="DBNavigator.ProjectSettingsDialog/0.0.1600.900@0.0.1600.900" timestamp="1587345828028" />
+    <state x="582" y="191" key="FileChooserDialogImpl" timestamp="1587345616165">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="582" y="191" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1587345616165" />
+    <state x="381" y="193" key="IDE.errors.dialog" timestamp="1587346891466">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="381" y="193" key="IDE.errors.dialog/0.0.1600.900@0.0.1600.900" timestamp="1587346891466" />
+    <state x="310" y="95" width="1282" height="709" key="SettingsEditor" timestamp="1587347559144">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="310" y="95" width="1282" height="709" key="SettingsEditor/0.0.1600.900@0.0.1600.900" timestamp="1587347559144" />
+    <state x="464" y="111" width="1021" height="676" key="search.everywhere.popup" timestamp="1587346701651">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="464" y="111" width="1021" height="676" key="search.everywhere.popup/0.0.1600.900@0.0.1600.900" timestamp="1587346701651" />
   </component>
 </project>

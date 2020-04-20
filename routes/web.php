@@ -22,9 +22,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::group([
-    'prefix' => 'procurement/', 'namespace' => 'Procurement', 'as' => 'procurement.', 'middleware' => ['auth']], function () {
+    'prefix' => 'procurement/', 'namespace' => 'Procurement', 'as' => 'procurement.', 'middleware' => ['auth']],
+    function () {
     Route::get('dashboard', 'HomeController@index')->name('dashboard');
     Route::resource('tender', 'TenderController');
+    
     Route::prefix('tenders/')->group(function (){
         Route::get('bidders', 'HomeController@tenders')->name('tender-bidders');
         Route::get('create', 'HomeController@createTenders')->name('create-tenders');

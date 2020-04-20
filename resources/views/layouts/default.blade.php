@@ -371,7 +371,6 @@
         });
 
     </script>
-
     <script type="application/javascript">
         $(document).ready(function() {
             var groupColumn = 1;

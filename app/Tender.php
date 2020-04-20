@@ -34,6 +34,6 @@ class Tender extends Model
 
     public function bids(): HasMany
     {
-        return $this->hasMany(Bidding::class,'tender_id','id');
+        return $this->hasMany(Bidding::class);
     }
 }
