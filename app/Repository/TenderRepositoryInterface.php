@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repository;
+    namespace App\Repository;
 
-interface TenderRepositoryInterface
-{
-    public function publishTender($args);
+    interface TenderRepositoryInterface
+    {
+        public function publishTender($args);
 
-    public function getTenders();
-}
+        public function getTenders();
+    }

@@ -1,91 +1,97 @@
 <?php
 
-namespace App\Http\Controllers\Procurement;
+    namespace App\Http\Controllers\Procurement;
 
-use App\Facade\TenderRepository;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreTenderRequest;
-use Illuminate\Http\Request;
+    use App\Facade\TenderRepository;
+    use App\Http\Controllers\Controller;
+    use App\Http\Requests\StoreTenderRequest;
+    use Illuminate\Http\Request;
 
-class TenderController extends Controller
-{
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    class TenderController extends Controller
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(StoreTenderRequest $request)
-    {
-        $results = TenderRepository::publishTender($request);
-        if ($results) {
-            $request->session()->flash('status', 'Successfully published a tender');
+        /**
+         * Display a listing of the resource.
+         *
+         * @return \Illuminate\Http\Response
+         */
+        public function index()
+        {
+            //
         }
-        return redirect()->route('home');
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+        /**
+         * Show the form for creating a new resource.
+         *
+         * @return \Illuminate\Http\Response
+         */
+        public function create()
+        {
+            //
+        }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+        /**
+         * Store a newly created resource in storage.
+         *
+         * @param \Illuminate\Http\Request $request
+         *
+         * @return \Illuminate\Http\Response
+         */
+        public function store(StoreTenderRequest $request)
+        {
+            $results = TenderRepository::publishTender($request);
+            if ($results) {
+                $request->session()->flash('status', 'Successfully published a tender');
+            }
+            return redirect()->route('home');
+        }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+        /**
+         * Display the specified resource.
+         *
+         * @param int $id
+         *
+         * @return \Illuminate\Http\Response
+         */
+        public function show($id)
+        {
+            $pathToFile = storage_path() . '/app/' . $id;
+            return response()->download($pathToFile);
+        }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        /**
+         * Show the form for editing the specified resource.
+         *
+         * @param int $id
+         *
+         * @return \Illuminate\Http\Response
+         */
+        public function edit($id)
+        {
+            //
+        }
+
+        /**
+         * Update the specified resource in storage.
+         *
+         * @param \Illuminate\Http\Request $request
+         * @param int                      $id
+         *
+         * @return \Illuminate\Http\Response
+         */
+        public function update(Request $request, $id)
+        {
+            //
+        }
+
+        /**
+         * Remove the specified resource from storage.
+         *
+         * @param int $id
+         *
+         * @return \Illuminate\Http\Response
+         */
+        public function destroy($id)
+        {
+            //
+        }
     }
-}

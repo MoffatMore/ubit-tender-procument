@@ -1,12 +1,12 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+    /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Tender;
-use Faker\Generator as Faker;
+    use App\Tender;
+    use Faker\Generator as Faker;
 
-$factory->define(Tender::class, function (Faker $faker) {
-    return [
-        //
-    ];
-});
+    $factory->define(Tender::class, function (Faker $faker) {
+        return [
+            //
+        ];
+    });

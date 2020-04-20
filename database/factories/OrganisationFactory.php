@@ -1,12 +1,12 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+    /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Organisation;
-use Faker\Generator as Faker;
+    use App\Organisation;
+    use Faker\Generator as Faker;
 
-$factory->define(Organisation::class, function (Faker $faker) {
-    return [
-        //
-    ];
-});
+    $factory->define(Organisation::class, function (Faker $faker) {
+        return [
+            //
+        ];
+    });

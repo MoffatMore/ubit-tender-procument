@@ -1,39 +1,39 @@
 <?php
 
-namespace App;
+    namespace App;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+    use Illuminate\Database\Eloquent\Model;
+    use Illuminate\Database\Eloquent\Relations\BelongsTo;
+    use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Tender extends Model
-{
-    //
-
-    protected $dates = [
-        'end_time',
-        'start_time',
-        'created_at',
-        'updated_at',
-    ];
-
-    protected $fillable = [
-        'user_id',
-        'name',
-        'reference_no',
-        'requirements',
-        'proc_dept',
-        'start_time',
-        'end_time',
-    ];
-
-    public function user(): BelongsTo
+    class Tender extends Model
     {
-        return $this->belongsTo(User::class);
-    }
+        //
 
-    public function bids(): HasMany
-    {
-        return $this->hasMany(Bidding::class);
+        protected $dates = [
+            'end_time',
+            'start_time',
+            'created_at',
+            'updated_at',
+        ];
+
+        protected $fillable = [
+            'user_id',
+            'name',
+            'reference_no',
+            'requirements',
+            'proc_dept',
+            'start_time',
+            'end_time',
+        ];
+
+        public function user(): BelongsTo
+        {
+            return $this->belongsTo(User::class);
+        }
+
+        public function bids(): HasMany
+        {
+            return $this->hasMany(Bidding::class);
+        }
     }
-}

@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Facade;
+    namespace App\Facade;
 
-use Illuminate\Support\Facades\Facade;
+    use Illuminate\Support\Facades\Facade;
 
-/**
- * Class CaseRepository
- * @package App\Facade
- */
-class TenderRepository extends Facade
-{
     /**
-     * @return string
+     * Class CaseRepository
+     * @package App\Facade
      */
-    protected static function getFacadeAccessor()
+    class TenderRepository extends Facade
     {
-        return 'TenderRepository';
+        /**
+         * @return string
+         */
+        protected static function getFacadeAccessor(): string
+        {
+            return 'TenderRepository';
+        }
     }
-}

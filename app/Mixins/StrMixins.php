@@ -1,18 +1,18 @@
 <?php
 
 
-namespace App\Mixins;
+    namespace App\Mixins;
 
 
-use Illuminate\Support\Str;
+    use Illuminate\Support\Str;
 
-class StrMixins
-{
-    public function referenceNumber()
+    class StrMixins
     {
-        return function () {
-            $reference = Str::random(8);
-            return Str::upper('TN-' . substr($reference, 0, 3) . '-' . substr($reference, 3) . '-UB');
-        };
+        public function referenceNumber()
+        {
+            return function () {
+                $reference = Str::random(8);
+                return Str::upper('TN-' . substr($reference, 0, 3) . '-' . substr($reference, 3) . '-UB');
+            };
+        }
     }
-}

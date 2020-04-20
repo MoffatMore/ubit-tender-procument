@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\View;
+    namespace App\Http\View;
 
-use App\Facade\TenderRepository;
-use Illuminate\View\View;
+    use App\Facade\TenderRepository;
+    use Illuminate\View\View;
 
-class TenderComposer
-{
-    public function compose(View $view)
+    class TenderComposer
     {
-        return $view->with('tenders', TenderRepository::getTenders());
+        public function compose(View $view)
+        {
+            return $view->with('tenders', TenderRepository::getTenders());
+        }
     }
-}
