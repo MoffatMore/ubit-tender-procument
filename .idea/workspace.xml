@@ -29,7 +29,8 @@
       <change beforePath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_19_190515_create_biddings_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_04_19_190515_create_bids_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/procurement/rejected-bidders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/rejected-bidders.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/procurement/tender-evaluation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/tender-evaluation.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +190,7 @@
       <workItem from="1587345430753" duration="10220000" />
       <workItem from="1587394236513" duration="1635000" />
       <workItem from="1587404108335" duration="146000" />
-      <workItem from="1587405171940" duration="5891000" />
+      <workItem from="1587405171940" duration="11035000" />
     </task>
     <servers />
   </component>
@@ -213,6 +214,10 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="610" y="342" key="#Composer/0.0.1600.900@0.0.1600.900" timestamp="1587333828183" />
+    <state x="670" y="286" key="#Notifications" timestamp="1587418165942">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="670" y="286" key="#Notifications/0.0.1600.900@0.0.1600.900" timestamp="1587418165942" />
     <state x="393" y="91" key="#Plugins" timestamp="1587345573519">
       <screen x="0" y="0" width="1600" height="900" />
     </state>

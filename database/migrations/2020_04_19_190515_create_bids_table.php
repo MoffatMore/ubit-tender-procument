@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBiddingsTable extends Migration
+class CreateBidsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -18,8 +18,9 @@ class CreateBiddingsTable extends Migration
             $table->foreignId('user_id');
             $table->foreignId('tender_id');
             $table->string('status');
+            $table->integer('score')->default(0);
+            $table->string('attachments')->default(null);
             $table->boolean('qualification')->default(false);
-            $table->boolean('docs')->default(false);
             $table->timestamps();
         });
     }

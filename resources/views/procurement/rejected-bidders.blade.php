@@ -42,7 +42,7 @@
                                         <td>{{ $tender->reference_no }}</td>
                                         <td>{{ $bid->user->organisation->name }}</td>
                                         <td>
-                                            @if ($bid->docs === 0)
+                                            @if (null === $bid->attachments)
                                                 <i class="fa fa-times fa-2x text-danger"></i>
                                             @else
                                                 <i class="fa fa-check fa-2x text-success" ></i>

@@ -40,6 +40,7 @@
                                         <th>Documents</th>
                                         <th>Qualification</th>
                                         <th>Status</th>
+                                        <th>Score</th>
                                         <th>Action</th>
                                     </tr>
                                     </thead>
@@ -48,14 +49,34 @@
                                     @foreach($tender->bids as $bid)
                                         @if ($bid->status === 'approved')
                                             <tr>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                ...
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <td>{{ $tender->id }}</td>
                                                 <td>{{ $tender->reference_no }}</td>
                                                 <td>{{ $bid->user->organisation->name }}</td>
                                                 <td>
-                                                    @if ($bid->docs === 0)
+                                                    @if (null === $bid->attachments)
                                                         <i class="fa fa-times fa-2x text-danger"></i>
                                                     @else
-                                                        <i class="fa fa-check fa-2x text-success" ></i>
+                                                        <i class="fa fa-check fa-2x text-success"></i>
                                                     @endif
                                                 </td>
                                                 <td>
@@ -69,8 +90,12 @@
                                                     <i class="fa fa-check fa-2x text-success" ></i>
                                                 </td>
                                                 <td>
-                                                    <a class="btn btn-info btn-sm  text-center text-white" href="">
-                                                        <i class="fa fa-award"></i> Evauate</a>
+                                                    {{ $bid->score ?? 0 }}
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-info btn-sm  text-center text-white"
+                                                            data-toggle="modal" data-target="#exampleModal">
+                                                        <i class="fa fa-award"></i> Evaluate</button>
                                                 </td>
                                             </tr>
                                         @endif
