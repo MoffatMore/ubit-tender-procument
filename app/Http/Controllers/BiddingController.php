@@ -77,7 +77,7 @@
             //
             $results = BiddingRepository::setBidScore($id, $request->score);
             if ($results) {
-                return redirect()->back()->with('status', 'Susscessfully evaluated a bidder');
+                return redirect()->back()->with('status', 'Successfully evaluated a bidder');
             }
             return redirect()->back('fail', 'Failed to score a bidder');
         }
