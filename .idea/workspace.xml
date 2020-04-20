@@ -30,9 +30,6 @@
       <change beforePath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procurement/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procurement/rejected-bidders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/rejected-bidders.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procurement/tender-bidders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/tender-bidders.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/procurement/tender-evaluation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/tender-evaluation.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +189,7 @@
       <workItem from="1587345430753" duration="10220000" />
       <workItem from="1587394236513" duration="1635000" />
       <workItem from="1587404108335" duration="146000" />
-      <workItem from="1587405171940" duration="1574000" />
+      <workItem from="1587405171940" duration="5891000" />
     </task>
     <servers />
   </component>
