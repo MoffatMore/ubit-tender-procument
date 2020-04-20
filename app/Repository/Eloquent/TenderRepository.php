@@ -16,8 +16,7 @@ class TenderRepository extends AbstractBaseRepository implements TenderRepositor
 
     public function update($id, array $attributes): Model
     {
-        $tender = $this->find($id);
-        return $tender;
+        return $this->find($id);
     }
     public function publishTender($args)
     {

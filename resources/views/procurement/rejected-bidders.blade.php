@@ -11,7 +11,7 @@
             <div class="card-body">
                 <input type="hidden" name="_token" value="{{ @csrf_token() }}">
                 <div class="table-responsive">
-                    <table id="example1" class="table table-striped table-borderless nowrap" style="width:100%">
+                    <table id="rejected_bidders" class="table table-striped table-borderless nowrap" style="width:100%">
                         <thead>
                         <tr>
                             <th>#</th>
@@ -23,7 +23,6 @@
                             <th>Status</th>
                         </tr>
                         </thead>
-
                         <tbody>
                         @foreach($tenders as $tender)
                             @foreach($tender->bids as $bid)

@@ -20,29 +20,49 @@
                                 <th>Organisation Name</th>
                                 <th>Documents</th>
                                 <th>Qualification</th>
+                                <th>Status</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Construction</td>
-                                <td>TF-332-WS</td>
-                                <td>UB</td>
-                                <td>x</td>
-                                <td>UB CS</td>
-                                <td>
-                                    <a class="btn btn-info btn-sm  text-center text-white" href=""><i
-                                            class="fa fa-accusoft"></i> Evauate</a>
-                                    <a class="btn btn-warning btn-sm  text-center text-white" data-toggle="modal"
-                                        data-target="#editClientFileModal"><i class="fa
-                                    fa-pencil-alt"></i> Edit</a>
-                                    <button class="delete btn btn-danger btn-sm text-center text-white" id=""
-                                        data-id=''>
-                                        <i class="fa fa-trash"></i>Delete</button>
-                                </td>
-                            </tr>
+                        @foreach($tenders as $tender)
+                            @foreach($tender->bids as $bid)
+                                @if ($bid->status >= 0)
+                                    <tr>
+                                        <td>{{ $tender->id }}</td>
+                                        <td>{{ $tender->name }}</td>
+                                        <td>{{ $tender->reference_no }}</td>
+                                        <td>{{ $bid->user->organisation->name }}</td>
+                                        <td>
+                                            @if ($bid->docs === 0)
+                                                <i class="fa fa-times fa-2x text-danger"></i>
+                                            @else
+                                                <i class="fa fa-check fa-2x text-success" ></i>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if ($bid->qualification === 0)
+                                                <i class="fa fa-times fa-2x text-danger"></i>
+                                            @else
+                                                <i class="fa fa-check fa-2x text-success" ></i>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            @if ($bid->status === 0)
+                                                <i class="fa fa-times fa-2x text-danger"></i>
+                                            @else
+                                                <i class="fa fa-check fa-2x text-success" ></i>
+                                            @endif
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-info btn-sm  text-center text-white" href="">
+                                                <i class="fa fa-accusoft"></i> Evauate</a>
+                                        </td>
+                                    </tr>
+                                @endif
+                            @endforeach
+                        @endforeach
                         </tbody>
                     </table>
                 </div>
