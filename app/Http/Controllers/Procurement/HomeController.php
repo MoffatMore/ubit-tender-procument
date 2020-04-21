@@ -36,9 +36,4 @@
         {
             return view('procurement.tender-evaluation');
         }
-
-        public function setBidScore($id, $score)
-        {
-
-        }
     }
