@@ -157,10 +157,12 @@
                             </div>
                         </div>
                     @else
-                        <div class="alert alert-info text-center" role="alert">
-                            No Tenders to evaluate at the moment!
-                        </div>
-                        @break
+                        @if ($index < 1)
+                            <div class="alert alert-info text-center" role="alert">
+                                No Tenders to evaluate at the moment!
+                            </div>
+                            @break
+                        @endif
                     @endif
                     @php
                         ++$index;
