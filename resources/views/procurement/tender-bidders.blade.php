@@ -46,8 +46,8 @@
                                     </td>
                                     <td>
                                         @if ($tender->end_time < now())
-                                            <a class="btn btn-info btn-sm  text-center text-white" href=""><i
-                                                        class="fa fa-award"></i> Evauate</a>
+                                            <a class="btn btn-info btn-sm  text-center text-white"
+                                               href="{{ route('procurement.tender-evaluation') }}"><i class="fa fa-award"></i> Evauate</a>
                                         @else
                                             <a class="btn btn-warning btn-sm  text-center text-white"
                                                data-toggle="modal"
