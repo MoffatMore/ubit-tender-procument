@@ -50,9 +50,16 @@
                         </div>
                         <div class="form-group {{ $errors->has('requirements') ? 'has-error' : '' }}">
                             <label for="requirements">Tender Requirements</label>
-                            <textarea type="text" id="requirements" name="requirements" class="form-control" required>
-                            {{ old('requirements') }}
-                        </textarea>
+                            <textarea type="text" id="requirements" name="requirements"
+                                      class="form-control" required cols="1" rows="10" wrap="on"
+                                      style="text-align: left; padding: -10px;">{{ old('requirements') }}
+1. Company Certificate
+2. Tax Clearance
+3. Banc Acc
+4. Trading licence
+5. PPADB
+6. Quatation
+                            </textarea>
                             @if($errors->has('requirements'))
                                 <em class="invalid-feedback">
                                     {{ $errors->first('requirements') }}
