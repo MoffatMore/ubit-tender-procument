@@ -28,7 +28,8 @@
       <change beforePath="$PROJECT_DIR$/../law-firm/app/Repository/Eloquent/CaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/app/Repository/Eloquent/CaseRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procurement/tender-bidders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/tender-bidders.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mixins/StrMixins.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mixins/StrMixins.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,12 +191,22 @@
       <workItem from="1587345430753" duration="10220000" />
       <workItem from="1587394236513" duration="1635000" />
       <workItem from="1587404108335" duration="146000" />
-      <workItem from="1587405171940" duration="19823000" />
+      <workItem from="1587405171940" duration="20272000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
