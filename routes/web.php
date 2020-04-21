@@ -22,6 +22,7 @@
 
 
     Route::resource('bids', 'BiddingController');
+    Route::resource('message','MessageController');
 
     Route::group([
         'prefix' => 'procurement/', 'namespace' => 'Procurement', 'as' => 'procurement.', 'middleware' => ['auth']],

@@ -20,12 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3003a452-1fb3-431d-af22-70322cae2a55" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Bidder/HomeController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/bidders/dashboard.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/bidders/tender-awards.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/procurer-side-navbar.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/tenders/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MessageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/MessageFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_04_21_165445_create_messages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/MessageSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/law-firm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/law-firm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/vcs.xml" afterDir="false" />
@@ -34,16 +33,13 @@
       <change beforePath="$PROJECT_DIR$/../law-firm/app/Repository/Eloquent/CaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/app/Repository/Eloquent/CaseRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/TenderRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/TenderRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/TenderRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/TenderRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Tender.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tender.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Bidder/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Bidder/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/AbstractBaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/AbstractBaseRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/UserRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/UserRepositoryInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/bidders/bid-tender.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bidders/bid-tender.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/side-nav-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/bidder-side-navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/bidders/tender-awards.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bidders/tender-awards.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -172,6 +168,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -207,7 +204,7 @@
       <workItem from="1587345430753" duration="10220000" />
       <workItem from="1587394236513" duration="1635000" />
       <workItem from="1587404108335" duration="146000" />
-      <workItem from="1587405171940" duration="37819000" />
+      <workItem from="1587405171940" duration="44525000" />
     </task>
     <servers />
   </component>
@@ -236,6 +233,9 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="610" y="342" key="#Composer" timestamp="1587333828183">
       <screen x="0" y="0" width="1600" height="900" />
@@ -253,10 +253,10 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="393" y="91" key="#Plugins/0.0.1600.900@0.0.1600.900" timestamp="1587345573519" />
-    <state x="604" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1587440248093">
+    <state x="604" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1587488586866">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="604" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900@0.0.1600.900" timestamp="1587440248093" />
+    <state x="604" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900@0.0.1600.900" timestamp="1587488586866" />
     <state x="563" y="240" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587422462394">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
@@ -289,6 +289,10 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="310" y="95" width="1282" height="709" key="SettingsEditor/0.0.1600.900@0.0.1600.900" timestamp="1587446676804" />
+    <state x="100" y="100" width="1400" height="700" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1587491218984">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="100" y="100" width="1400" height="700" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1600.900@0.0.1600.900" timestamp="1587491218984" />
     <state x="464" y="111" width="1021" height="676" key="search.everywhere.popup" timestamp="1587346701651">
       <screen x="0" y="0" width="1600" height="900" />
     </state>

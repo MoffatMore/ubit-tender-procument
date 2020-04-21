@@ -46,10 +46,10 @@
          * @param       $id
          * @param array $attributes
          *
-         * @return void
+         * @return bool
          */
 
-        public function delete(int $id)
+        public function delete(int $id): bool
         {
             $this->model->find($id)->delete();
             return true;
@@ -58,5 +58,5 @@
         /**
          * @inheritDoc
          */
-        public abstract function update(int $id, array $attributes): Model;
+        abstract public function update(int $id, array $attributes): Model;
     }
