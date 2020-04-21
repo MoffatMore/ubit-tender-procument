@@ -36,3 +36,10 @@
                 Route::get('rejection', 'HomeController@rejectedTenders')->name('rejected-tenders');
             });
         });
+
+    Route::group([ 'prefix' => 'bidder','namespace'=>'Bidder', 'as'=>'bidder.','middleware'=>['auth']],
+        function (){
+        Route::get('dashboard', 'HomeController@index')->name('dashboard');
+        Route::get('awards', 'HomeController@awards')->name('awards');
+        Route::get('tenders', 'HomeController@tenders')->name('tenders');
+    });

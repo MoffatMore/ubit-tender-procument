@@ -7,4 +7,6 @@
         public function publishTender($args);
 
         public function getTenders();
+
+        public function availableTenders();
     }

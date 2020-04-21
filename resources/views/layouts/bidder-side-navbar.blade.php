@@ -6,12 +6,6 @@
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
-        {{-- @auth('procurement')
-        <div class="sidebar-brand-text mx-3"> </div>
-        @endauth
-        @auth('bidder')
-        <div class="sidebar-brand-text mx-3"> </div>
-        @endauth --}}
     </a>
 
     <!-- Divider -->
@@ -36,8 +30,8 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
            aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Tenders</span>
+            <i class="fas fa-fw fa-award"></i>
+            <span>My Tenders</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -55,8 +49,8 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
            aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Evaluation</span>
+            <i class="fas fa-fw fa-calendar"></i>
+            <span>Available Tenders</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">

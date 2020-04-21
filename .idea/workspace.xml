@@ -20,6 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3003a452-1fb3-431d-af22-70322cae2a55" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Bidder/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/bidders/dashboard.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/bidders/tender-awards.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/procurer-side-navbar.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/tenders/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/law-firm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/law-firm.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/.idea/vcs.xml" afterDir="false" />
@@ -28,8 +34,17 @@
       <change beforePath="$PROJECT_DIR$/../law-firm/app/Repository/Eloquent/CaseRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/app/Repository/Eloquent/CaseRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/procurement/create-tender.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/create-tender.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/TenderRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/TenderRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Repository/TenderRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/TenderRepositoryInterface.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Tender.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tender.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/bidders/bid-tender.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bidders/bid-tender.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/default.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/side-nav-bar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/bidder-side-navbar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +183,8 @@
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="php.override.implement.member.chooser.php.doc" value="DEFAULT" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -191,7 +207,7 @@
       <workItem from="1587345430753" duration="10220000" />
       <workItem from="1587394236513" duration="1635000" />
       <workItem from="1587404108335" duration="146000" />
-      <workItem from="1587405171940" duration="22837000" />
+      <workItem from="1587405171940" duration="37819000" />
     </task>
     <servers />
   </component>
@@ -225,6 +241,10 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="610" y="342" key="#Composer/0.0.1600.900@0.0.1600.900" timestamp="1587333828183" />
+    <state x="822" y="349" key="#Custom_Plugin_Repositories" timestamp="1587435888719">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="822" y="349" key="#Custom_Plugin_Repositories/0.0.1600.900@0.0.1600.900" timestamp="1587435888719" />
     <state x="670" y="286" key="#Notifications" timestamp="1587418165942">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
@@ -233,10 +253,10 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="393" y="91" key="#Plugins/0.0.1600.900@0.0.1600.900" timestamp="1587345573519" />
-    <state x="604" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1587423471923">
+    <state x="604" y="119" key="#com.intellij.ide.util.MemberChooser" timestamp="1587440248093">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="604" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900@0.0.1600.900" timestamp="1587423471923" />
+    <state x="604" y="119" key="#com.intellij.ide.util.MemberChooser/0.0.1600.900@0.0.1600.900" timestamp="1587440248093" />
     <state x="563" y="240" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1587422462394">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
@@ -249,26 +269,26 @@
       <screen x="0" y="0" width="1600" height="900" />
     </state>
     <state x="332" y="105" key="DBNavigator.ProjectSettingsDialog/0.0.1600.900@0.0.1600.900" timestamp="1587345828028" />
-    <state x="582" y="191" key="FileChooserDialogImpl" timestamp="1587345616165">
+    <state x="582" y="191" key="FileChooserDialogImpl" timestamp="1587442172835">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="582" y="191" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1587345616165" />
-    <state x="381" y="193" key="IDE.errors.dialog" timestamp="1587346891466">
+    <state x="582" y="191" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1587442172835" />
+    <state x="381" y="193" key="IDE.errors.dialog" timestamp="1587442091363">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="381" y="193" key="IDE.errors.dialog/0.0.1600.900@0.0.1600.900" timestamp="1587346891466" />
-    <state x="471" y="158" key="NewPhpClassDialog" timestamp="1587422757464">
+    <state x="381" y="193" key="IDE.errors.dialog/0.0.1600.900@0.0.1600.900" timestamp="1587442091363" />
+    <state x="471" y="158" key="NewPhpClassDialog" timestamp="1587435794430">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="471" y="158" key="NewPhpClassDialog/0.0.1600.900@0.0.1600.900" timestamp="1587422757464" />
-    <state x="619" y="369" key="NewPhpFileDialog" timestamp="1587422726872">
+    <state x="471" y="158" key="NewPhpClassDialog/0.0.1600.900@0.0.1600.900" timestamp="1587435794430" />
+    <state x="619" y="369" key="NewPhpFileDialog" timestamp="1587441403716">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="619" y="369" key="NewPhpFileDialog/0.0.1600.900@0.0.1600.900" timestamp="1587422726872" />
-    <state x="310" y="95" width="1282" height="709" key="SettingsEditor" timestamp="1587421797358">
+    <state x="619" y="369" key="NewPhpFileDialog/0.0.1600.900@0.0.1600.900" timestamp="1587441403716" />
+    <state x="310" y="95" width="1282" height="709" key="SettingsEditor" timestamp="1587446676804">
       <screen x="0" y="0" width="1600" height="900" />
     </state>
-    <state x="310" y="95" width="1282" height="709" key="SettingsEditor/0.0.1600.900@0.0.1600.900" timestamp="1587421797358" />
+    <state x="310" y="95" width="1282" height="709" key="SettingsEditor/0.0.1600.900@0.0.1600.900" timestamp="1587446676804" />
     <state x="464" y="111" width="1021" height="676" key="search.everywhere.popup" timestamp="1587346701651">
       <screen x="0" y="0" width="1600" height="900" />
     </state>

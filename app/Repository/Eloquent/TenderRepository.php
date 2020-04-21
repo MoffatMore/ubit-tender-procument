@@ -43,4 +43,13 @@
             return null;
         }
 
+        /**
+         * @return mixed
+         */
+        public function availableTenders()
+        {
+            $tenders = $this->model->where('end_time','>=', now())->get();
+            $tenders = $tenders->load('user','user.organisation');
+            return $tenders;
+        }
     }

@@ -15,7 +15,7 @@
          */
         public const HOME = '/home';
         public const PROCUREMENT = 'procurement.dashboard';
-        public const BIDDERS = 'bidders.dashboard';
+        public const BIDDERS = 'bidder.dashboard';
         /**
          * This namespace is applied to your controller routes.
          *

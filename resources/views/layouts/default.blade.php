@@ -36,7 +36,11 @@
 
 <body id="page-top">
 <div id="wrapper">
-@include('layouts.side-nav-bar')
+    @if (Auth::user()->hasRole('procurer'))
+        @include('layouts.procurer-side-navbar')
+    @else
+        @include('layouts.bidder-side-navbar')
+    @endif
 <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 
@@ -218,7 +222,8 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                {{ Auth::user()->name }} {{ Auth::user()->surname }}</span>
                             <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
                         </a>
                         <!-- Dropdown - User Information -->
