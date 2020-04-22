@@ -73,10 +73,11 @@
                 'contact' => $data['org_contact'],
                 'location' => $data['org_location'],
             ]);
+
             if ($organisation->first() !== null) {
                 $user = User::create([
                     'name' => $data['name'],
-                    'organisation_id' => $organisation->first()->id,
+                    'organisation_id' => $organisation->id,
                     'email' => $data['email'],
                     'password' => Hash::make($data['password']),
                 ]);
