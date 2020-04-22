@@ -38,11 +38,4 @@
             return $this->hasMany(Bidding::class);
         }
 
-//        public function organisation()
-//        {
-//            return $this->hasOneThrough(Organisation::class,
-//            User::class,
-//            'organisation_id',
-//            'user_id');
-//        }
     }

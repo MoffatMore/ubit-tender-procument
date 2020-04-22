@@ -2,10 +2,12 @@
 
     namespace App\Repository\Eloquent;
 
+    use App\Awards;
     use App\Message;
     use App\Repository\UserRepositoryInterface;
     use App\User;
     use Illuminate\Support\Collection;
+    use Illuminate\Support\Facades\Auth;
 
     class UserRepository extends AbstractBaseRepository implements UserRepositoryInterface
     {
@@ -53,7 +55,9 @@
          */
         public function myTenderAwards()
         {
-            // TODO: Implement myTenderAwards() method.
+            return Awards::where('user_id',Auth::user()->id)
+                ->get()
+                ->load(['tender','tender.user.organisation']);
         }
 
         /**
