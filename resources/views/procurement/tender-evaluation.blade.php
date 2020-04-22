@@ -27,14 +27,14 @@
                                 <h5 class="mb-0">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#collapse{{ $tender->id }}" aria-expanded="true"
-                                            aria-controls="collapseOne"
-                                    >
+                                            aria-controls="collapseOne">
                                         Tender: {{ $tender->name }}
                                     </button>
                                 </h5>
                             </div>
 
-                            <div id="collapse{{ $tender->id }}" class="collapse {{ $index === 0 ? 'show' : ''}}" aria-labelledby="heading{{ $tender->id }}"
+                            <div id="collapse{{ $tender->id }}" class="collapse {{ $index === 0 ? 'show' : ''}}"
+                                 aria-labelledby="heading{{ $tender->id }}"
                                  data-parent="#accordionExample">
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -58,7 +58,7 @@
                                                 @if ($bid->status === 'approved')
                                                     <tr>
                                                         <!-- Modal -->
-                                                        <div class="modal fade" id="exampleModal" tabindex="-1"
+                                                        <div class="modal fade" id="exampleModal{{ $bid->id }}" tabindex="-1"
                                                              role="dialog"
                                                              aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                             <div class="modal-dialog" role="document">
@@ -143,7 +143,7 @@
                                                         </td>
                                                         <td>
                                                             <button class="btn btn-info btn-sm  text-center text-white"
-                                                                    data-toggle="modal" data-target="#exampleModal">
+                                                                    data-toggle="modal" data-target="#exampleModal{{ $bid->id }}">
                                                                 <i class="fa fa-award"></i> Evaluate
                                                             </button>
                                                         </td>

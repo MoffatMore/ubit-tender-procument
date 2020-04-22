@@ -29,7 +29,7 @@
       <change beforePath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/procurement/tender-evaluation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/tender-evaluation.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +193,7 @@
       <workItem from="1587345430753" duration="10220000" />
       <workItem from="1587394236513" duration="1635000" />
       <workItem from="1587404108335" duration="146000" />
-      <workItem from="1587405171940" duration="61883000" />
+      <workItem from="1587405171940" duration="62846000" />
     </task>
     <servers />
   </component>
