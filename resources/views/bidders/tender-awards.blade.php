@@ -40,15 +40,15 @@
                     <div class="table-responsive">
                         <table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
                             <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Organisation Name</th>
-                                    <th>Tender Name</th>
-                                    <th>Reference No</th>
-                                    <th>Opening Date</th>
-                                    <th>Closing Date</th>
-                                    <th>Action</th>
-                                </tr>
+                            <tr>
+                                <th>#</th>
+                                <th>Organisation Name</th>
+                                <th>Tender Name</th>
+                                <th>Reference No</th>
+                                <th>Opening Date</th>
+                                <th>Closing Date</th>
+                                <th>Action</th>
+                            </tr>
                             </thead>
                             <tbody>
                             @inject('bids','App\Repository\BiddingRepositoryInterface')

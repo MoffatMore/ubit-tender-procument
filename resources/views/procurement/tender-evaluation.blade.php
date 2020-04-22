@@ -21,10 +21,10 @@
                     $index = 0;
                 @endphp
                 @foreach($tenders as $tender)
-                    @if ($tender->end_time < now())
+                    @if ($tender->end_time < now() && $tender->status !== 'evaluated')
                         <div class="card">
                             <div class="card-header" id="heading{{ $tender->id }}">
-                                <h5 class="mb-0">
+                                <h5 class="mb-2">
                                     <button class="btn btn-link" type="button" data-toggle="collapse"
                                             data-target="#collapse{{ $tender->id }}" aria-expanded="true"
                                             aria-controls="collapseOne">
@@ -33,12 +33,12 @@
                                 </h5>
                             </div>
 
-                            <div id="collapse{{ $tender->id }}" class="collapse {{ $index === 0 ? 'show' : ''}}"
+                            <div id="collapse{{ $tender->id }}" class="collapse show"
                                  aria-labelledby="heading{{ $tender->id }}"
                                  data-parent="#accordionExample">
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table id="example" class="table table-striped table-borderless nowrap"
+                                        <table id="{{ $tender->id }}" class="table table-striped table-borderless nowrap"
                                                style="width:100%">
                                             <thead>
                                             <tr>
@@ -55,10 +55,11 @@
 
                                             <tbody>
                                             @foreach($tender->bids as $bid)
-                                                @if ($bid->status === 'approved')
+                                                @if ($bid->status === 'approved' )
                                                     <tr>
                                                         <!-- Modal -->
-                                                        <div class="modal fade" id="exampleModal{{ $bid->id }}" tabindex="-1"
+                                                        <div class="modal fade" id="exampleModal{{ $bid->id }}"
+                                                             tabindex="-1"
                                                              role="dialog"
                                                              aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                             <div class="modal-dialog" role="document">
@@ -69,7 +70,8 @@
                                                                     @method('PUT')
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
-                                                                            <h5 class="modal-title" id="exampleModalLabel">
+                                                                            <h5 class="modal-title"
+                                                                                id="exampleModalLabel">
                                                                                 Bidder: {{ $bid->user->organisation->name }}
                                                                             </h5>
                                                                             <button type="button" class="close"
@@ -79,19 +81,20 @@
                                                                             </button>
                                                                         </div>
                                                                         <div class="modal-body">
-
-                                                                            <div class="alert alert-info alert-dismissible fade show"
+                                                                            <h5>List of Attachments</h5>
+                                                                            <div class="alert alert-light fade show"
                                                                                  role="alert">
-                                                                                <strong>
-                                                                                    <a href="{{ route('procurement.tender.show',
-                                                                            ['tender'=>'hie.txt']) }}">A simple primary
-                                                                                        alert—check it out!</a>
-                                                                                </strong>
-                                                                                <button type="button" class="close"
-                                                                                        data-dismiss="alert"
-                                                                                        aria-label="Close">
-                                                                                    <span aria-hidden="true">&times;</span>
-                                                                                </button>
+                                                                                <ul>
+                                                                                    @foreach (explode(',',$bid->attachments) as $attachment)
+                                                                                        <li>
+                                                                                            <strong>
+                                                                                                <a href="{{ route('procurement.tender.show',
+                                                                            ['tender'=>$attachment]) }}">{{ $attachment }}</a>
+                                                                                            </strong>
+                                                                                        </li>
+
+                                                                                    @endforeach
+                                                                                </ul>
                                                                             </div>
                                                                             <div class="input-group mb-3">
                                                                                 <div class="input-group-prepend">
@@ -107,10 +110,12 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="modal-footer">
-                                                                            <button type="button" class="btn btn-secondary"
+                                                                            <button type="button"
+                                                                                    class="btn btn-secondary"
                                                                                     data-dismiss="modal">Close
                                                                             </button>
-                                                                            <button type="submit" class="btn btn-primary">
+                                                                            <button type="submit"
+                                                                                    class="btn btn-primary">
                                                                                 Save changes
                                                                             </button>
                                                                         </div>
@@ -138,12 +143,14 @@
                                                         <td>
                                                             <i class="fa fa-check fa-2x text-success"></i>
                                                         </td>
+                                                        <td>{{ $tender->status }}</td>
                                                         <td>
                                                             {{ $bid->score ?? 0 }}
                                                         </td>
                                                         <td>
                                                             <button class="btn btn-info btn-sm  text-center text-white"
-                                                                    data-toggle="modal" data-target="#exampleModal{{ $bid->id }}">
+                                                                    data-toggle="modal"
+                                                                    data-target="#exampleModal{{ $bid->id }}">
                                                                 <i class="fa fa-award"></i> Evaluate
                                                             </button>
                                                         </td>
@@ -151,23 +158,103 @@
                                                 @endif
                                             @endforeach
                                             </tbody>
+                                            <tfoot>
+                                            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                                <button type="button" class="close" data-dismiss="alert"
+                                                        aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn btn-primary"
+                                                        data-toggle="modal"
+                                                        data-target="#model{{ $tender->id }}">
+                                                    <i class="fa fa-share-square"></i> Publish Results
+                                                </button>
+
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="model{{ $tender->id }}" tabindex="-1"
+                                                     role="dialog"
+                                                     aria-labelledby="modelTitleId" aria-hidden="true">
+                                                    <div class="modal-dialog" role="document">
+                                                        <form method="POST"
+                                                              action="{{ route('procurement.publish-results') }}">
+                                                            @csrf
+                                                            <input type="hidden" name="tender_id"
+                                                                   value="{{ $tender->id }}">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title">Publish Results for
+                                                                        Tender: {{ $tender->name }}</h5>
+                                                                    <button type="button" class="close"
+                                                                            data-dismiss="modal"
+                                                                            aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    Publishing the results for this tender will award a
+                                                                    bidder with highest score.
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-danger"
+                                                                            data-dismiss="modal">Close
+                                                                    </button>
+                                                                    <button type="submit" class="btn btn-success">
+                                                                        Publish
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <script>
+                                                $(".alert").alert();
+                                            </script>
+                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    @else
-                        @if ($index < 1)
-                            <div class="alert alert-info text-center" role="alert">
-                                No Tenders to evaluate at the moment!
-                            </div>
-                            @break
-                        @endif
                     @endif
                     @php
                         ++$index;
                     @endphp
+                        <script type="application/javascript">
+                            $(document).ready(function () {
+                                let groupColumn = 0;
+                                $('#{{ $tender->id }}').DataTable({
+                                    responsive: {
+                                        details: {
+                                            display: $.fn.dataTable.Responsive.display.modal({
+                                                header: function (row) {
+                                                    var data = row.data();
+                                                    return 'Tender Details for ' + data[0];
+                                                }
+                                            })
+                                            , renderer: $.fn.dataTable.Responsive.renderer.tableAll({
+                                                tableClass: 'table'
+                                            })
+                                        }
+                                    }
+                                    , "columnDefs": [{
+                                        "visible": false
+                                        , "targets": groupColumn
+                                    }]
+                                    , "displayLength": 10
+                                    ,
+                                });
+                            });
+
+                        </script>
                 @endforeach
+                @if ($index < 1)
+                    <div class="alert alert-info text-center" role="alert">
+                        No Tenders to evaluate at the moment!
+                    </div>
+                @endif
             </div>
         </div>
         <!-- /.container-fluid -->

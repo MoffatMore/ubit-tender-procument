@@ -20,6 +20,7 @@
                 $table->string('reference_no')->unique();
                 $table->string('requirements');
                 $table->string('proc_dept');
+                $table->string('status')->default('published');
                 $table->datetime('start_time');
                 $table->datetime('end_time');
                 $table->timestamps();

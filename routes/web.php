@@ -22,7 +22,7 @@
 
 
     Route::resource('bids', 'BiddingController');
-    Route::resource('message','MessageController');
+    Route::resource('message', 'MessageController');
 
     Route::group([
         'prefix' => 'procurement/', 'namespace' => 'Procurement', 'as' => 'procurement.', 'middleware' => ['auth']],
@@ -35,14 +35,15 @@
                 Route::get('create', 'HomeController@createTenders')->name('create-tenders');
                 Route::get('evaluation', 'HomeController@tenderEvaluation')->name('tender-evaluation');
                 Route::get('rejection', 'HomeController@rejectedTenders')->name('rejected-tenders');
+                Route::post('publish-results', 'HomeController@publishResults')->name('publish-results');
             });
         });
 
-    Route::group([ 'prefix' => 'bidder','namespace'=>'Bidder', 'as'=>'bidder.','middleware'=>['auth']],
-        function (){
-        Route::get('dashboard', 'HomeController@index')->name('dashboard');
-        Route::get('awards', 'HomeController@awards')->name('awards');
-        Route::get('tenders', 'HomeController@tenders')->name('tenders');
-        Route::get('/show-tender/{tender}', 'HomeController@showTender')->name('show-tender');
-        Route::post('/submit-tender', 'HomeController@submitTender')->name('submit-tender');
-    });
+    Route::group(['prefix' => 'bidder', 'namespace' => 'Bidder', 'as' => 'bidder.', 'middleware' => ['auth']],
+        function () {
+            Route::get('dashboard', 'HomeController@index')->name('dashboard');
+            Route::get('awards', 'HomeController@awards')->name('awards');
+            Route::get('tenders', 'HomeController@tenders')->name('tenders');
+            Route::get('/show-tender/{tender}', 'HomeController@showTender')->name('show-tender');
+            Route::post('/submit-tender', 'HomeController@submitTender')->name('submit-tender');
+        });

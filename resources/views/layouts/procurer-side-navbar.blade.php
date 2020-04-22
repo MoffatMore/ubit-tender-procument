@@ -43,9 +43,9 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">List of Tenders:</h6>
                 @isset($tenders)
-                @foreach ($tenders as $tenders)
-                <a class="collapse-item" href="buttons.html">{{ $tenders->name }}</a>
-                @endforeach
+                    @foreach ($tenders as $tenders)
+                        <a class="collapse-item" href="buttons.html">{{ $tenders->name }}</a>
+                    @endforeach
                 @endisset
             </div>
         </div>

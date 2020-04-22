@@ -2,7 +2,9 @@
 
     namespace App\Repository\Eloquent;
 
+    use App\Awards;
     use App\Bidding;
+    use App\Facade\BiddingRepository;
     use App\Repository\TenderRepositoryInterface;
     use App\Tender;
     use Illuminate\Database\Eloquent\Model;
@@ -13,11 +15,6 @@
         public function __construct(Tender $model)
         {
             parent::__construct($model);
-        }
-
-        public function update($id, array $attributes): Model
-        {
-            return $this->find($id);
         }
 
         public function publishTender($args)
@@ -49,21 +46,51 @@
          */
         public function availableTenders()
         {
-            $tenders = $this->model->where('end_time','>=', now())->get();
-            $tenders = $tenders->load('user','user.organisation','bids');
+            $tenders = $this->model->where('end_time', '>=', now())->get();
+            $tenders = $tenders->load('user', 'user.organisation', 'bids');
             $availableTenders = array();
             foreach ($tenders as $tender) {
-                $bid = Bidding::where('tender_id',$tender->id)
-                    ->where('user_id',Auth::user()->id)
+                $bid = Bidding::where('tender_id', $tender->id)
+                    ->where('user_id', Auth::user()->id)
                     ->first();
 
                 if ($bid && $bid->count() > 0) {
-                   continue;
-                }else{
+                    continue;
+                } else {
                     $availableTenders[] = $tender;
                 }
             }
 
             return $availableTenders;
+        }
+
+        public function awardTender($tender_id)
+        {
+            $bid = BiddingRepository::getHighestBid($tender_id);
+            if ($bid && $bid->count() > 0) {
+                $award = Awards::create([
+                    'tender_id' => $tender_id,
+                    'user_id' => $bid->user_id,
+                    'score' => $bid->score
+                ]);
+                if ($award) {
+                    $this->update($tender_id, [
+                        'status' => 'evaluated'
+                    ]);
+                }
+                return $award;
+            }
+            return false;
+        }
+
+        /**
+         * @param int   $id
+         * @param array $attributes
+         *
+         * @return bool|Model
+         */
+        public function update($id, array $attributes)
+        {
+            return $this->find($id)->update($attributes);
         }
     }

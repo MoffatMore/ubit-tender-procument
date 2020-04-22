@@ -36,11 +36,11 @@
 
 <body id="page-top">
 <div id="wrapper">
-    @if (Auth::user()->hasRole('procurer'))
-        @include('layouts.procurer-side-navbar')
-    @else
-        @include('layouts.bidder-side-navbar')
-    @endif
+@if (Auth::user()->hasRole('procurer'))
+    @include('layouts.procurer-side-navbar')
+@else
+    @include('layouts.bidder-side-navbar')
+@endif
 <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
 

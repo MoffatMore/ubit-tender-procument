@@ -48,13 +48,13 @@
                             <tr>
                                 <td>
                                     @php
-                                    $index = 1;
+                                        $index = 1;
                                     @endphp
                                     @foreach(preg_split('/\d/', $tender->requirements) as $doc)
                                         @if($doc !== '')
                                             <em>{{ $index . '. '. $doc }} </em><br>
                                             @php
-                                            $index++;
+                                                $index++;
                                             @endphp
                                         @endif
                                     @endforeach
@@ -103,7 +103,8 @@
                                         @if($doc !== '')
                                             <div class="form-group">
                                                 <label for="{{ $index }}"> {{ $doc }}</label>
-                                                <input type="file" name="{{ Str::snake($doc) }}" id="" class="form-control" placeholder=""
+                                                <input type="file" name="{{ Str::snake($doc) }}" id=""
+                                                       class="form-control" placeholder=""
                                                        aria-describedby="helpId">
                                                 <small id="helpId" class="text-muted text-danger">Required *</small>
                                             </div>
@@ -117,7 +118,8 @@
                                             @if($doc !== '')
                                                 <div class="form-group">
                                                     <label for="{{ $index }}"> {{ $doc }}</label>
-                                                    <input type="file" name="{{ Str::snake($doc) }}" id="" class="form-control" placeholder=""
+                                                    <input type="file" name="{{ Str::snake($doc) }}" id=""
+                                                           class="form-control" placeholder=""
                                                            aria-describedby="helpId">
                                                     <small id="helpId" class="text-muted text-danger">Required *</small>
                                                 </div>
@@ -134,10 +136,11 @@
                             <input type="hidden" value="{{ $index }}" name="doc_requirements">
                             <input type="hidden" value="{{ $tender->id }}" name="tender_id">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Submit</button>
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Submit
+                            </button>
                         </div>
                     </div>
                 </form>
+            </div>
         </div>
-    </div>
 @endsection

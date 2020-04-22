@@ -12,5 +12,5 @@
 
         public function setBidScore($id, $score);
 
-        public function getAward();
+        public function getHighestBid($tender_id);
     }

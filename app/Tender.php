@@ -25,6 +25,7 @@
             'proc_dept',
             'start_time',
             'end_time',
+            'status',
         ];
 
         public function user(): BelongsTo

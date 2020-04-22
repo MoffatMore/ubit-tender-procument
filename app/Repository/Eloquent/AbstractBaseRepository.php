@@ -58,5 +58,5 @@
         /**
          * @inheritDoc
          */
-        abstract public function update(int $id, array $attributes): Model;
+        abstract public function update(int $id, array $attributes);
     }

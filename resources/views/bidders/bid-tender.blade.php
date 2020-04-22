@@ -56,9 +56,9 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <input type="hidden" class="form-control" name="user_id"
-                                                    value="{{ Auth::user()->id }}">
+                                                           value="{{ Auth::user()->id }}">
                                                     <input type="hidden" class="form-control" name="tender_id"
-                                                    value="{{ $tender->id }}">
+                                                           value="{{ $tender->id }}">
                                                     <div class="form-group">
                                                     <textarea name="message" id="" cols="30" rows="10"
                                                               class="form-control"></textarea>
@@ -66,7 +66,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                    <button type="button" class="btn btn-secondary"
+                                                            data-dismiss="modal">
                                                         Close
                                                     </button>
                                                     <button type="submit" class="btn btn-primary">
@@ -86,7 +87,8 @@
                                     <td>{{ $tender->end_time }}</td>
                                     <td>
                                         <a class="btn btn-info btn-sm  text-center text-white"
-                                           href="{{ route('bidder.show-tender',[ 'tender' => $tender->id]) }}"><i class="fa fa-folder-open"></i> open</a>
+                                           href="{{ route('bidder.show-tender',[ 'tender' => $tender->id]) }}"><i
+                                                    class="fa fa-folder-open"></i> open</a>
                                         <!-- Button trigger modal -->
                                         <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                                                 data-target="#modelId">

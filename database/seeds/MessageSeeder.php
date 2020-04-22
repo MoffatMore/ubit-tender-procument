@@ -1,16 +1,16 @@
 <?php
 
-use Illuminate\Database\Seeder;
+    use Illuminate\Database\Seeder;
 
-class MessageSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
+    class MessageSeeder extends Seeder
     {
-        //
+        /**
+         * Run the database seeds.
+         *
+         * @return void
+         */
+        public function run()
+        {
+            //
+        }
     }
-}

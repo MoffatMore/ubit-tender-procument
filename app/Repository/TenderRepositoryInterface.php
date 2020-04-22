@@ -9,4 +9,6 @@
         public function getTenders();
 
         public function availableTenders();
+
+        public function awardTender($tender_id);
     }

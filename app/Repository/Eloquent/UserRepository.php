@@ -62,4 +62,5 @@
         public function getLawyersOnly(): Collection
         {
             // TODO: Implement getLawyersOnly() method.
-}}
+        }
+    }

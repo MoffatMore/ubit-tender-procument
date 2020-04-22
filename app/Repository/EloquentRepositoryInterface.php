@@ -36,7 +36,6 @@
          * @param int   $id
          * @param array $attributes
          *
-         * @return Model
          */
-        public function update(int $id, array $attributes): Model;
+        public function update(int $id, array $attributes);
     }

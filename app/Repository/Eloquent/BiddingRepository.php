@@ -47,9 +47,9 @@
          */
         public function getMyBids()
         {
-            return $this->model->where('user_id',Auth::user()->id)
+            return $this->model->where('user_id', Auth::user()->id)
                 ->get()
-                ->load(['tender','tender.user.organisation']);
+                ->load(['tender', 'tender.user.organisation']);
         }
 
         /**
@@ -67,10 +67,13 @@
         }
 
         /**
-         *
+         * @return mixed
          */
-        public function getAward()
+        public function getHighestBid($tender_id)
         {
-            // TODO: Implement getAward() method.
+            $highestBid = $this->model->where('tender_id', $tender_id)
+                ->orderBy('score', 'desc')
+                ->first();
+            return $highestBid;
         }
     }
