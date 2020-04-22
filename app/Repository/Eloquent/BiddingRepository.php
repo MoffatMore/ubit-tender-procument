@@ -74,6 +74,7 @@
             $highestBid = $this->model->where('tender_id', $tender_id)
                 ->orderBy('score', 'desc')
                 ->first();
+            $highestBid = $highestBid->load(['user','user.organisation']);
             return $highestBid;
         }
     }

@@ -221,6 +221,60 @@
                                 </div>
                             </div>
                         </div>
+                    @elseif ($tender->end_time < now() && $tender->status === 'evaluated')
+                        
+                        <div class="card">
+                            <div class="card-header" id="heading{{ $tender->id }}">
+                                <h5 class="mb-2">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                            data-target="#collapse{{ $tender->id }}" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                        Tender: {{ $tender->name }}
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapse{{ $tender->id }}" class="collapse show"
+                                 aria-labelledby="heading{{ $tender->id }}"
+                                 data-parent="#accordionExample">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="{{ $tender->id }}" class="table table-striped table-borderless nowrap"
+                                               style="width:100%">
+                                            <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Reference No</th>
+                                                <th>Organisation Name</th>
+                                                <th>Status</th>
+                                                <th>Score</th>
+                                            </tr>
+                                            </thead>
+
+                                            <tbody>
+                                            @inject('awards','App\Repository\BiddingRepositoryInterface')
+                                            @if ($awards->getHighestBid($tender->id) !== null)
+                                                @php
+                                                $award = $awards->getHighestBid($tender->id);
+                                                @endphp
+                                                <tr>
+                                                    <td>{{ $tender->id }}</td>
+                                                    <td>{{ $tender->reference_no }}</td>
+                                                    <td>{{ $award->user->organisation->name }}</td>
+                                                    <td>{{ $tender->status }}</td>
+                                                    <td>
+                                                        {{ $award->score ?? 0 }}
+                                                    </td>
+                                                </tr>
+                                            @endif
+                                            </tbody>
+                                            <tfoot>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
                     @endif
                     <script type="application/javascript">
                             $(document).ready(function () {

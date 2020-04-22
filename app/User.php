@@ -49,4 +49,14 @@
         {
             return $this->hasMany(Tender::class);
         }
+
+        public function bids(): HasMany
+        {
+            return $this->hasMany(Bidding::class);
+        }
+
+        public function award()
+        {
+            return $this->hasMany(Awards::class);
+        }
     }
