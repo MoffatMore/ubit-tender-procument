@@ -6,6 +6,7 @@
 
     use App\Bidding;
     use Illuminate\Database\Eloquent\Model;
+    use Illuminate\Support\Facades\Auth;
 
     /**
      * Class BiddingRepository
@@ -46,7 +47,9 @@
          */
         public function getMyBids()
         {
-            // TODO: Implement getMyBids() method.
+            return $this->model->where('user_id',Auth::user()->id)
+                ->get()
+                ->load(['tender','tender.user.organisation']);
         }
 
         /**
