@@ -85,8 +85,8 @@
                                     <td>{{ $tender->start_time }}</td>
                                     <td>{{ $tender->end_time }}</td>
                                     <td>
-                                        <a class="btn btn-info btn-sm  text-center text-white" href=""><i
-                                                    class="fa fa-folder-open"></i> open</a>
+                                        <a class="btn btn-info btn-sm  text-center text-white"
+                                           href="{{ route('bidder.show-tender',[ 'tender' => $tender->id]) }}"><i class="fa fa-folder-open"></i> open</a>
                                         <!-- Button trigger modal -->
                                         <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
                                                 data-target="#modelId">

@@ -38,7 +38,7 @@
          */
         public function bid($customer)
         {
-            // TODO: Implement bid() method.
+            return $this->create($customer);
         }
 
         /**

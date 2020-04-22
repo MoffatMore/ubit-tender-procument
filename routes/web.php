@@ -43,4 +43,6 @@
         Route::get('dashboard', 'HomeController@index')->name('dashboard');
         Route::get('awards', 'HomeController@awards')->name('awards');
         Route::get('tenders', 'HomeController@tenders')->name('tenders');
+        Route::get('/show-tender/{tender}', 'HomeController@showTender')->name('show-tender');
+        Route::post('/submit-tender', 'HomeController@submitTender')->name('submit-tender');
     });

@@ -49,7 +49,7 @@
         public function availableTenders()
         {
             $tenders = $this->model->where('end_time','>=', now())->get();
-            $tenders = $tenders->load('user','user.organisation');
+            $tenders = $tenders->load('user','user.organisation','bids');
             return $tenders;
         }
     }
