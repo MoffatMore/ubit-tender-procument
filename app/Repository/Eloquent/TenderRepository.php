@@ -2,6 +2,7 @@
 
     namespace App\Repository\Eloquent;
 
+    use App\Bidding;
     use App\Repository\TenderRepositoryInterface;
     use App\Tender;
     use Illuminate\Database\Eloquent\Model;
@@ -50,6 +51,19 @@
         {
             $tenders = $this->model->where('end_time','>=', now())->get();
             $tenders = $tenders->load('user','user.organisation','bids');
-            return $tenders;
+            $availableTenders = array();
+            foreach ($tenders as $tender) {
+                $bid = Bidding::where('tender_id',$tender->id)
+                    ->where('user_id',Auth::user()->id)
+                    ->first();
+
+                if ($bid && $bid->count() > 0) {
+                   continue;
+                }else{
+                    $availableTenders[] = $tender;
+                }
+            }
+
+            return $availableTenders;
         }
     }
