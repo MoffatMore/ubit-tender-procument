@@ -22,6 +22,9 @@
                 @endphp
                 @foreach($tenders as $tender)
                     @if ($tender->end_time < now() && $tender->status !== 'evaluated')
+                        @php
+                            ++$index;
+                        @endphp
                         <div class="card">
                             <div class="card-header" id="heading{{ $tender->id }}">
                                 <h5 class="mb-2">
@@ -219,10 +222,7 @@
                             </div>
                         </div>
                     @endif
-                    @php
-                        ++$index;
-                    @endphp
-                        <script type="application/javascript">
+                    <script type="application/javascript">
                             $(document).ready(function () {
                                 let groupColumn = 0;
                                 $('#{{ $tender->id }}').DataTable({
