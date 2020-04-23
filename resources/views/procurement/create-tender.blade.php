@@ -17,7 +17,6 @@
                 </div>
 
                 <div class="card-body">
-
                     <form action="{{ route('procurement.tender.store') }}" method="POST" enctype="multipart/form-data"
                           id="form">
                         @csrf
@@ -102,7 +101,6 @@
                             </button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>

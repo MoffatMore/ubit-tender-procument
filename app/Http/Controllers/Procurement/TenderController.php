@@ -5,7 +5,9 @@
     use App\Facade\TenderRepository;
     use App\Http\Controllers\Controller;
     use App\Http\Requests\StoreTenderRequest;
+    use Illuminate\Http\RedirectResponse;
     use Illuminate\Http\Request;
+    use Illuminate\Support\Facades\Session;
 
     class TenderController extends Controller
     {
@@ -32,7 +34,7 @@
         /**
          * Store a newly created resource in storage.
          *
-         * @param \Illuminate\Http\Request $request
+         * @param Request $request
          *
          * @return \Illuminate\Http\Response
          */
@@ -73,14 +75,21 @@
         /**
          * Update the specified resource in storage.
          *
-         * @param \Illuminate\Http\Request $request
-         * @param int                      $id
+         * @param Request $request
+         * @param int     $id
          *
-         * @return \Illuminate\Http\Response
+         * @return RedirectResponse
          */
         public function update(Request $request, $id)
         {
-            //
+            $results = TenderRepository::update($id,$request->all());
+            if ($results){
+                Session::flash('status', 'Successfully edited a tender');
+            }else{
+                Session::flash('status', 'Failed to edit a tender');
+            }
+
+            return redirect()->back();
         }
 
         /**
@@ -92,6 +101,13 @@
          */
         public function destroy($id)
         {
-            //
+            $results = TenderRepository::delete($id);
+            if ($results){
+                Session::flash('status', 'Successfully edited a tender');
+            }else{
+                Session::flash('status', 'Failed to edit a tender');
+            }
+
+            return redirect()->back();
         }
     }

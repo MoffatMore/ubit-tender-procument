@@ -29,9 +29,9 @@
       <change beforePath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/database/seeds/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/../law-firm/resources/views/admin/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Repository/Eloquent/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Repository/Eloquent/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Tender.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Tender.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/bidders/tender-awards.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/bidders/tender-awards.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Procurement/TenderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Procurement/TenderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/procurement/create-tender.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/create-tender.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/procurement/tender-bidders.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/procurement/tender-bidders.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,7 +196,7 @@
       <workItem from="1587394236513" duration="1635000" />
       <workItem from="1587404108335" duration="146000" />
       <workItem from="1587405171940" duration="72102000" />
-      <workItem from="1587574944621" duration="8099000" />
+      <workItem from="1587574944621" duration="13094000" />
     </task>
     <servers />
   </component>
